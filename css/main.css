@@ -12,5 +12,23 @@ body {
 }
 
 /* regole contenuto principale */
+.main-section h2 {
+    font-size: 16px;
+    color: orange;
+}
+
+.main-section h3 {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.main-section p {
+    font-size: 14px;
+}
 
 /* regole footer */
+footer {
+    font-size: 10px;
+    border-top: solid 3px orange;
+
+}
