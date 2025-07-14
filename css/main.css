@@ -5,6 +5,11 @@ body {
 }
 
 /* regole header */
+#main-header {
+    text-align: center;
+    background-color: #eeeeee;
+    border-bottom: solid 3px orange;
+}
 
 /* regole contenuto principale */
 
