@@ -1,34 +1,69 @@
-/* regole generali di pagina */
+/* reloge generali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    background: url("https://ssl.gstatic.com/ui/v1/icons/mail/themes/desk/bg2_1920x1200.jpg");
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
 }
 
 /* regole header */
 #main-header {
+    border-bottom: solid 2px #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#logo {
+    height: 100px;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+#logo-text {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* search  */
+#count {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
     text-align: center;
-    background-color: #eeeeee;
-    border-bottom: solid 3px orange;
+    vertical-align: middle;
+    line-height: 50px;
+    border-radius: 50%;
 }
 
-/* regole contenuto principale */
-.main-section h2 {
-    font-size: 16px;
-    color: orange;
+/* contenuto principale */
+.mail-item {
+    padding: 5px;
+    border: solid 1px #000;
+    background-color: #ccc;
+    color: #000;
 }
 
-.main-section h3 {
-    font-size: 14px;
-    font-style: italic;
+.mail-item.unread {
+    background-color: #fff;
 }
 
-.main-section p {
-    font-size: 14px;
-}
-
-/* regole footer */
-footer {
-    font-size: 10px;
-    border-top: solid 3px orange;
-
+.preview-text {
+    color: #646161;
 }

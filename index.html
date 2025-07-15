@@ -5,77 +5,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>CV Pinco Pallo</title>
+    <title>Gmail Replica</title>
 </head>
 
 <body>
-    <!-- testata -->
-    <header id="main-header">
-        <img src="https://www.litalianovero.it/wp/wp-content/uploads/2019/11/pinco-pallino-259x300.jpg"
-            alt="immagine candidato">
-        <h1>Pinco Pallo - Web Developer</h1>
-    </header>
+    <!-- contenitore di centratura blocco pagina intero -->
+    <div class="container">
 
-    <!-- contenuto principale -->
-    <main>
-        <!-- sezione Esperienze -->
-        <section class="main-section">
-            <h2>Experiences</h2>
-            <!-- item sezione -->
-            <div>
-                <h3>Titolo elemento</h3>
-                <p>
-                    Contenuto elemento Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam
-                    praesentium placeat? Illo sit unde distinctio perspiciatis exercitationem temporibus quo, corporis
-                    adipisci quas ipsam facere est et velit nostrum minima.
-                </p>
-            </div>
+        <!-- intestazione -->
+        <header>
 
-            <!-- item sezione -->
-            <div>
-                <h3>Titolo elemento</h3>
-                <p>
-                    Contenuto elemento Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam
-                    praesentium placeat? Illo sit unde distinctio perspiciatis exercitationem temporibus quo, corporis
-                    adipisci quas ipsam facere est et velit nostrum minima.
-                </p>
-            </div>
-        </section>
+            <!-- parte header principale -->
+            <section id="main-header">
+                <img src="img/Gmail-logo.png" alt="logo Gmail" id="logo">
+                <span id="logo-text">Gmail</span>
 
-        <!-- sezione Studi -->
-        <section class="main-section">
-            <h2>Education</h2>
-            <!-- item sezione -->
-            <div>
-                <h3>Titolo elemento</h3>
-                <p>
-                    Contenuto elemento Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam
-                    praesentium placeat? Illo sit unde distinctio perspiciatis exercitationem temporibus quo, corporis
-                    adipisci quas ipsam facere est et velit nostrum minima.
-                </p>
-            </div>
-        </section>
+            </section>
 
-        <!-- sezione Interessi -->
-        <section class="main-section">
-            <h2>Interests</h2>
-            <!-- item sezione -->
-            <div>
-                <h3>Titolo elemento</h3>
-                <p>
-                    Contenuto elemento Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aperiam
-                    praesentium placeat? Illo sit unde distinctio perspiciatis exercitationem temporibus quo, corporis
-                    adipisci quas ipsam facere est et velit nostrum minima.
-                </p>
-            </div>
-        </section>
+            <!-- sezione ricerca header -->
+            <section>
+                <div>
+                    <input type="text" placeholder="Search">
+                    <button>Vai</button>
+                </div>
 
-    </main>
+                <!-- risultato ricerca -->
+                <div id="count">
+                    You Have
+                    <span class="number">30</span>
+                    unread
+                </div>
+            </section>
 
-    <!-- fondo pagina -->
-    <footer>
-        Made with &hearts; by Boolean Careers
-    </footer>
+        </header>
+
+        <!-- contenuto -->
+        <main>
+            <section>
+                <!-- blocco mail item -->
+                <div class="mail-item">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+                <!-- blocco mail item -->
+                <div class="mail-item">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+                <!-- blocco mail item -->
+                <div class="mail-item">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+                <!-- blocco mail item -->
+                <div class="mail-item">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+                <!-- blocco mail item -->
+                <div class="mail-item unread">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+                <!-- blocco mail item -->
+                <div class="mail-item">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+                <!-- blocco mail item -->
+                <div class="mail-item unread">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+                <!-- blocco mail item -->
+                <div class="mail-item">
+                    <input type="checkbox">
+                    &star;
+                    Oggetto della mail
+                    <span class="preview-text">
+                        - testo della mail -
+                    </span>
+                </div>
+
+
+            </section>
+
+        </main>
+
+        <!-- fondo pagina -->
+        <footer>
+
+        </footer>
+
+    </div>
+
 </body>
 
 </html>
