@@ -8,62 +8,48 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    background: url("https://ssl.gstatic.com/ui/v1/icons/mail/themes/desk/bg2_1920x1200.jpg");
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
+a {
+    text-decoration: none;
+    color: brown;
 }
 
-/* regole header */
-#main-header {
-    border-bottom: solid 2px #fff;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+a:hover {
+    color: chartreuse;
 }
 
-#logo {
-    height: 100px;
-    vertical-align: middle;
-    line-height: 100px;
+
+/*  esempi selettori avanzati */
+input[type="email"] {
+    border-color: blueviolet;
 }
 
-#logo-text {
-    color: #fff;
-    font-size: 20px;
+.cont-main>p {
+    color: red;
 }
 
-/* search  */
-#count {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #fff;
+ul {
+    padding-left: 25px;
 }
 
-.number {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: orange;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 50px;
-    border-radius: 50%;
+li {
+    color: chocolate;
+    font-size: 16px;
 }
 
-/* contenuto principale */
-.mail-item {
-    padding: 5px;
-    border: solid 1px #000;
-    background-color: #ccc;
-    color: #000;
+ul li:first-child {
+    color: crimson;
 }
 
-.mail-item.unread {
-    background-color: #fff;
+::marker {
+    color: black;
 }
 
-.preview-text {
-    color: #646161;
+li::after {
+    content: "-";
+}
+
+li:before {
+    content: "\00B6";
 }
