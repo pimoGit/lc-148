@@ -19,37 +19,19 @@ a:hover {
     color: chartreuse;
 }
 
+/* regole corpo pagina */
+.container {
+    background-color: cadetblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-/*  esempi selettori avanzati */
-input[type="email"] {
-    border-color: blueviolet;
 }
 
-.cont-main>p {
-    color: red;
-}
-
-ul {
-    padding-left: 25px;
-}
-
-li {
-    color: chocolate;
-    font-size: 16px;
-}
-
-ul li:first-child {
-    color: crimson;
-}
-
-::marker {
-    color: black;
-}
-
-li::after {
-    content: "-";
-}
-
-li:before {
-    content: "\00B6";
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    border: solid 2px #000;
 }
