@@ -34,4 +34,10 @@ a:hover {
     height: 150px;
     background-color: blueviolet;
     border: solid 2px #000;
+    font-size: 40px;
+    color: #fff;
+}
+
+.second_box {
+    order: -1;
 }
