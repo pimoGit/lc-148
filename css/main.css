@@ -26,9 +26,11 @@ body {
 .card-content {
     color: white;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .card-content h3 {
     font-size: 20px;
-    margin-bottom: 10px;
 }
