@@ -10,6 +10,40 @@ body {
     font-size: 12px;
 }
 
+/* regole header */
+header {
+    height: 200px;
+    background-color: blueviolet;
+}
+
+#logo {
+    font-size: 40px;
+}
+
+#main-nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#main-nav ul {
+    list-style-type: none;
+    width: 700px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+/* regole contenuto main */
+main {
+    margin: 50px 0;
+}
+
 
 /*  regole card member */
 .card {
