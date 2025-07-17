@@ -10,34 +10,25 @@ body {
     font-size: 12px;
 }
 
-a {
-    text-decoration: none;
-    color: brown;
-}
 
-a:hover {
-    color: chartreuse;
-}
-
-/* regole corpo pagina */
-.container {
-    background-color: cadetblue;
-    height: 100vh;
+/*  regole card member */
+.card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    width: 360px;
+    height: 100px;
+    background-color: black;
 }
 
-.box {
-    width: 150px;
-    height: 150px;
-    background-color: blueviolet;
-    border: solid 2px #000;
-    font-size: 40px;
-    color: #fff;
+.card-img img {
+    height: 100px;
 }
 
-.second_box {
-    order: -1;
+.card-content {
+    color: white;
+    padding: 10px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
