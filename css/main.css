@@ -45,7 +45,7 @@ header {
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 /* regole navigazione contestuale */
@@ -77,8 +77,9 @@ header {
 }
 
 main {
-    flex-grow: 1;
-    /* width: 60%; */
+    /* flex-grow: 1; */
+    margin: 0 10px;
+    width: calc(60% - 20px);
     /* DEBUG */
     /* background-color: crimson;
     height: 100px; */
