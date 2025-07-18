@@ -38,11 +38,44 @@ header {
 }
 
 
+/* regole riga principale */
+.row-container {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* gap: 10px; */
+}
+
+/* regole navigazione contestuale */
+.secondary-block {
+    width: 30%;
+    padding-right: 10px;
+    /* DEBUG */
+    /* background-color: blue;
+    height: 100px; */
+}
+
+.secondary-block ul {
+    list-style-type: none;
+}
+
+.secondary-block li {
+    margin-bottom: 15px;
+}
+
 
 /* regole contenuto main */
 main {
-    margin: 50px 0;
+    flex-grow: 1;
+    /* width: 68%; */
+    /* DEBUG */
+    /* background-color: crimson;
+    height: 100px; */
 }
+
+
 
 
 /*  regole card member */
@@ -67,4 +100,14 @@ main {
 
 .card-content h3 {
     font-size: 20px;
+}
+
+
+
+
+/* footer */
+footer {
+    /* DEBUG */
+    background-color: blue;
+    height: 200px;
 }
