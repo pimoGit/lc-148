@@ -45,12 +45,12 @@ header {
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
-    /* gap: 10px; */
+    gap: 10px;
 }
 
 /* regole navigazione contestuale */
 .secondary-block {
-    width: 30%;
+    width: 20%;
     padding-right: 10px;
     /* DEBUG */
     /* background-color: blue;
@@ -67,14 +67,29 @@ header {
 
 
 /* regole contenuto main */
+
+/* regole riga principale */
+.row-container-main {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 10px;
+}
+
 main {
     flex-grow: 1;
-    /* width: 68%; */
+    /* width: 60%; */
     /* DEBUG */
     /* background-color: crimson;
     height: 100px; */
 }
 
+.column {
+    width: calc(100% / 3);
+    /* DEBUG */
+    background-color: brown;
+    height: 100px;
+}
 
 
 
