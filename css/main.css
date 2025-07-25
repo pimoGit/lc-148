@@ -42,6 +42,17 @@
 /* desktop version */
 @media screen and (min-width: 1200px) {
 
+    header ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    header ul li {
+        padding: 10px;
+        background-color: blueviolet;
+    }
+
     .container {
         width: 80%;
         margin: 0 auto;
