@@ -10,65 +10,41 @@ body {
     font-size: 12px;
 }
 
-
-/*  blocco listato prod */
-
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.col {
-    width: calc((100% / 3) - (20px / 3));
-    /* flex-shrink: 0; */
-    /* debug */
-    /* background-color: blueviolet;
-    min-height: 150px;
-    border: 1px dotted black; */
-}
-
-
-.card {
-    position: relative;
+.container header {
+    background-color: blueviolet;
+    font-size: 30px;
     text-align: center;
-    cursor: pointer;
+    padding: 20px 0;
 }
 
-.card img {
-    max-width: 100%;
+/* versione tablet */
+@media screen and (max-width:768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .container header {
+        background-color: blue;
+    }
+
 }
 
-.discount-label {
-    padding: 5px;
-    background-color: green;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
+/* versione smartphone */
+@media screen and (max-width: 480px) {
 
-.discount-label.less-discount {
-    background-color: red;
-}
+    .container {
+        width: 100%;
+        margin: 0;
+    }
 
-.card .preferiti {
-    font-size: 40px;
-    color: red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: none;
-    /* ricentratura di se stesso */
-    transform: translate(-50%, -50%);
-}
+    .container header {
+        color: white;
+    }
 
-.card:hover .preferiti {
-    display: block;
 }
