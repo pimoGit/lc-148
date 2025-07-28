@@ -16,6 +16,12 @@
     margin-bottom: 10px;
 }
 
+.clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
 /* regole header */
 header {
     background-color: grey;
