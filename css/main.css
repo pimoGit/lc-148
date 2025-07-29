@@ -10,22 +10,17 @@
     font-size: 12px;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
 
 header {
     height: 150px;
-    flex-shrink: 0;
+
     /* DEBUG */
     background-color: blue;
 }
 
 
 main {
-    flex-grow: 1;
+    height: calc(100vh - 250px);
     overflow-y: auto;
     /* DEBUG */
     /* height: 250px; */
@@ -35,7 +30,6 @@ main {
 
 footer {
     height: 100px;
-    flex-shrink: 0;
     /* DEBUG */
     background-color: red;
 }
