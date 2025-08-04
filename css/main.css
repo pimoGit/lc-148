@@ -10,26 +10,25 @@
     font-size: 12px;
 }
 
-
-header {
-    height: 150px;
-
-    /* DEBUG */
-    background-color: blue;
+/* regole dubug griglia BS */
+[class^='container'] {
+    border: 1px dashed black;
+    background-color: lightblue;
+    min-height: 80vh;
 }
 
-
-main {
-    height: calc(100vh - 250px);
-    overflow-y: auto;
-    /* DEBUG */
-    /* height: 250px; */
-    background-color: green;
+[class^='row'] {
+    border: 1px dashed red;
 }
 
-
-footer {
+[class^='col'] {
     height: 100px;
-    /* DEBUG */
-    background-color: red;
+    background-color: #f1d2e7;
+    border: 1px solid #d0a8eb;
+}
+
+
+section {
+    background-color: chartreuse;
+    min-height: 300px;
 }
