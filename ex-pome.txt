@@ -1,0 +1,33 @@
+---
+Simo ci da un layout da fare nel pomeriggio
+ ---
+
+
+
+- apriamo Discord
+- Leggo la consegna MOLTO attentamente:
+    - SE (ho capito la consegna)
+        -> continuo
+    - ALTRIMENTI
+        -> rileggo
+            - SE (ho capito)
+                -> continuo
+            - ALTRIMENTI 
+                -> apro un ticket
+
+- creaimo un cartella 
+- rinominiamo (copiando e incollando nome repo)
+- apriamo VSc
+- apriamo la cartella da VSc
+- creaimo HTML
+- creiamo CSS
+- folder IMG
+
+
+FINCHE' (non termino l'EX)
+- scrivi codice
+- testo il codice
+SE (il codice funziona):
+    - commit -> push
+ALTRIMENTI
+    - correggo il codice
