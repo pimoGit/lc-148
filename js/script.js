@@ -1,5 +1,5 @@
 // dichiarazione variabile
-let firstName;
+let firstName, altraVar, nuovaVar;
 
 // assegnazione valore
 firstName = "Simone";
@@ -35,6 +35,13 @@ console.log("valore di sommaSbagliata", sommaSbagliata);
 let prodotto = somma * numeroStringa;
 
 console.log("valore di prodotto", prodotto);
+
+// uso proprietà e metodi 
+const numeroDaFissare = 0.12345;
+const risultato = numeroDaFissare.toFixed(3);
+console.log(risultato);
+
+console.log(0.12345.toString());
 
 
 
