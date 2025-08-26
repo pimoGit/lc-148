@@ -9,175 +9,25 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- inclusione BS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="css/main.css">
-    <title>esempio primo utilizzo BS</title>
+    <title>primi esempi con JS</title>
 </head>
 
 <body>
 
-    <!-- parte di intestazione -->
-    <header id="main-header">
-        <!-- navbar componente BS -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pagine-interne/nuova-pagina.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contatti</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container text-center">
-
-
-        <main>
-
-            <!-- sezione tutte colonne in unità -->
-
-            <section>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-4 bg-primary">
-                        Column
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        Column
-                    </div>
-                    <div class="col-sm-12 col-md-8 col-xl-4 offset-md-2 offset-xl-0">
-                        Column
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- sezione con una colonna libera -->
-
-            <section>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        Column
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        Column
-                    </div>
-                    <div class="col">
-                        Column
-                    </div>
-                </div>
-
-            </section>
-
-
-            <!-- sezione form HTML puro -->
-
-            <section>
-                <form action="#">
-                    <div>
-                        <label for="nome">Nome*</label>
-                        <input type="text" id="nome" name="nome" placeholder="inserisci il tuo nome" required>
-
-                        <label for="mail">E-mail</label>
-                        <input type="email" id="mail" name="email" placeholder="inserisci la tua email">
-                    </div>
-
-                    <div>
-                        <label for="message">Messaggio</label> <br>
-                        <textarea name="messaggio" id="message" rows="8" cols="80">
-
-                        </textarea>
-                    </div>
-
-                    <div>
-                        <label for="privacy">Ci lasci tutti i tuoi averi?</label>
-                        <input type="checkbox" id="privacy" value="ok">
-                    </div>
-
-                    <input type="range">
-
-                    <input type="submit" value="Invia">
-
-                </form>
-            </section>
-
-
-            <!-- sezione form BS -->
-            <section>
-
-
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="insert your address">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label for="inputZip" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                                Check me out
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                    </div>
-                </form>
-
-
-
-            </section>
-
-
-        </main>
-
+    <div id="mio_id">
+        qualcosa di iniziale
     </div>
 
+
+    <script type="text/javascript" src="js/script.js">
+
+    </script>
 
 
 
