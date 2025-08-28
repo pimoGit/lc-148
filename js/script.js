@@ -1,22 +1,12 @@
-// let y;
+// stampiamo solo i numeri pari da 1 a 100
 
-// let x = 2;
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log("siamo all'iterazione numero: ", i);
+    }
 
-// y = ++x; 
+}
 
-// x = x + 1;
-// y = x;
+console.log("Ok fine del loop, siamo fuori");
 
-// x = 3, y = 3
 
-let y;
-
-let x = 2;
-
-y = x++;
-
-y = x;
-
-x = x + 1;
-
-// y = 2, x = 3
