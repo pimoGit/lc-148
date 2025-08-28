@@ -1,11 +1,10 @@
-// stampiamo solo i numeri dispari da 1 a 100
+// stampiamo solo i numeri da 1000 a 1
 
-for (let i = 1; i <= 100; i++) {
-    if (i % 2) {
-        console.log("siamo all'iterazione numero: ", i);
-    }
-
+for (let i = 1000; i >= 1; i--) {
+    // fai cose
+    console.log(i);
 }
+
 
 console.log("Ok fine del loop, siamo fuori");
 
