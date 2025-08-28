@@ -1,42 +1,22 @@
-// gioco pari e dispari (1 - 5)
+// let y;
 
+// let x = 2;
 
-// INPUT
-// chiedo user un numero nel range
-const userNumber = parseInt(prompt("inserisci un numero tra 1 e 5"));
-console.log("numero user:", userNumber);
+// y = ++x; 
 
-// chiedo user puntata (pari/dispari)
-const userBet = prompt("scegli tra 'pari' e 'dispari'");
-console.log("scelta user:", userBet);
+// x = x + 1;
+// y = x;
 
-// genero numero PC nel range
-const pcNumber = Math.floor(Math.random() * 5) + 1;
-// const pcNumber = 3;
-console.log("numero pc:", pcNumber);
+// x = 3, y = 3
 
+let y;
 
-// ELABORAZIONE
-// sommiamo i due numeri
-const result = userNumber + pcNumber;
-console.log("la somma è:", result);
+let x = 2;
 
+y = x++;
 
-// check su somma (se pari o dispari)
-let checkResult;
+y = x;
 
-if (result % 2 === 0) {
-    checkResult = "pari";
-} else {
-    checkResult = "dispari";
-}
+x = x + 1;
 
-console.log("il check del risultato è:", checkResult);
-
-
-// check su segno somma con puntata user
-if (checkResult === userBet) {
-    console.log("hai vinto! Bravissimo!");
-} else {
-    console.log("hai perso ma sei stao bravo lo stesso");
-}
+// y = 2, x = 3
