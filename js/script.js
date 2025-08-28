@@ -1,9 +1,29 @@
 // stampiamo solo i numeri da 1000 a 1
 
-for (let i = 1000; i >= 1; i--) {
-    // fai cose
+// for (let i = 1; i <= 100; i++) {
+//     // fai cose
+//     console.log(i);
+// }
+
+
+// versione while
+let i = 1;
+while (i <= 100) {
+    // cose da fare
     console.log(i);
+    i++;
 }
+
+/* Es logico di uso while senza contatore
+let userOK = false;
+while(!userOK) {
+    // User deve fare delle robe (input)
+    if(User ha fatto quello che doveva){
+        userOK = true;
+    }
+}
+*/
+
 
 
 console.log("Ok fine del loop, siamo fuori");
