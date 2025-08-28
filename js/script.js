@@ -7,12 +7,12 @@
 
 
 // versione while
-let i = 1;
-while (i <= 100) {
+let i = 101;
+do {
     // cose da fare
     console.log(i);
     i++;
-}
+} while (i <= 100)
 
 /* Es logico di uso while senza contatore
 let userOK = false;
