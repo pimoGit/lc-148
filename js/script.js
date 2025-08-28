@@ -1,7 +1,7 @@
-// stampiamo solo i numeri pari da 1 a 100
+// stampiamo solo i numeri dispari da 1 a 100
 
 for (let i = 1; i <= 100; i++) {
-    if (i % 2 === 0) {
+    if (i % 2) {
         console.log("siamo all'iterazione numero: ", i);
     }
 
