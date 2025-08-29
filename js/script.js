@@ -1,11 +1,7 @@
-const numero = 1;
+const nomi = [1, 2, 3];
 
-const myArr = ["luca", "paolo", "mario"];
+for (let i = 0; i < nomi.length; i++) {
 
-console.log("array NON aggiornato", myArr);
+    console.log("al numero di iterazione,e quindi alla posizione di array numero", i, "abbaimo: ", nomi[i]);
 
-
-myArr.push("michele");
-
-
-console.log("array aggiornato", myArr);
+}
