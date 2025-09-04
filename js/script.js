@@ -12,5 +12,14 @@ mioBottone.addEventListener('click',
 
 
 function cambiaColore() {
-    mioParagrafo.classList.add("textgreen");
+    // check se presente già classe aggiuntiva
+    const isGreen = mioParagrafo.classList.contains("textgreen");
+    if (isGreen) {
+        mioParagrafo.classList.remove("textgreen");
+    } else {
+        mioParagrafo.classList.add("textgreen");
+    }
+
+    console.log(mioParagrafo.classList);
+
 }
