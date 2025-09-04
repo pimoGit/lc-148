@@ -10,30 +10,11 @@
     font-size: 12px;
 }
 
-/* regole dubug griglia BS */
-[class^='container'] {
-    border: 1px dashed black;
-    /* background-color: lightblue; */
-    /* min-height: 80vh; */
+.myParagraph {
+    color: red;
+    font-size: 16px;
 }
 
-[class^='row'] {
-    border: 1px dashed red;
-}
-
-[class^='col'] {
-    height: 100px;
-    /* background-color: #f1d2e7; */
-    border: 1px solid #d0a8eb;
-}
-
-
-section {
-    background-color: chartreuse;
-    min-height: 300px;
-}
-
-/*customizzazione navbar principale */
-#main-header .bg-body-tertiary {
-    background-color: blueviolet !important;
+.textgreen {
+    color: green;
 }
