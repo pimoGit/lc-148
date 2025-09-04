@@ -1,59 +1,28 @@
-// lista di invitati
-const invitati = ["invitato1", "invitato2", "invitato3", "invitato4"];
+// chiediamo nome a User e diamo output colorato a seconda del sesso
 
-// input utente da checkare
-const userCheck = prompt('inserisci la tua email');
-
-console.log("check array invitati:", isInArray(userCheck, invitati));
-
-const numbers = [1, 2, 3, 4, 5, 6, 7];
-
-let myNumber = 7;
-
-console.log("check array numeri:", isInArray(8, numbers));
+// SELEZIONE
+const outputEl = document.getElementById("output");
+console.log(outputEl);
 
 
+// INPUT
+// chiediamo il nome allo User
+const nome = prompt("inserisci il tuo nome");
 
-/*
-// creo una variabile di stato (trovato vero/falso)
-let trovato = false;
+// // chiediamo il sesso allo User
+const geneder = prompt("Sei unomo o donna? (M/F)");
 
-// cerchiamo
-for (let i = 0; i < invitati.length; i++) {
+// vado a definire il colore del testo
+// let nameColor;
+// if (geneder === "M") {
+//     nameColor = "blue";
+// } else {
+//     nameColor = "pink";
+// }
 
-    // variabile che contiene ad ogni iterazione un el dell'arr
-    let invitato = invitati[i];
-    console.log(invitato, i);
-
-    // faccio check di presenza invitato
-    if (invitato === userCheck) {
-        trovato = true;
-    }
-
-}
-
-console.log(trovato);
-*/
+const nameColor = geneder === "M" ? 'blue' : "pink";
 
 
-// funzione di check elemnto in array
-function isInArray(inpuValue, arrayToCheck) {
-    // creo una variabile di stato (trovato vero/falso)
-    let trovato = false;
-
-    // cerchiamo
-    for (let i = 0; i < arrayToCheck.length; i++) {
-
-        // variabile che contiene ad ogni iterazione un el dell'arr
-        let arrayElement = arrayToCheck[i];
-        // console.log(arrayElement, i);
-
-        // faccio check di presenza invitato
-        if (arrayElement === inpuValue) {
-            trovato = true;
-        }
-
-    }
-
-    return trovato
-}
+// facciamo output come User
+outputEl.innerHTML = "Ciao " + nome;
+outputEl.style.color = nameColor;
