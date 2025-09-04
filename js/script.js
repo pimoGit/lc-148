@@ -16,9 +16,18 @@ function cambiaColore() {
     const isGreen = mioParagrafo.classList.contains("textgreen");
     if (isGreen) {
         mioParagrafo.classList.remove("textgreen");
+        mioParagrafo.innerText += "Altro testo";
     } else {
         mioParagrafo.classList.add("textgreen");
     }
+
+    console.log(mioParagrafo.classList);
+
+}
+
+function cambiaColoreToggle() {
+    // check se presente già classe aggiuntiva
+    mioParagrafo.classList.toggle("textgreen");
 
     console.log(mioParagrafo.classList);
 
