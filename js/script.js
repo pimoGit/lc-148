@@ -2,6 +2,8 @@ const list = document.querySelector(".list");
 
 const names = ['Qui', 'Quo', 'Qua'];
 
+
+/* 
 let items = '';
 
 for (let i = 0; i < names.length; i++) {
@@ -12,3 +14,12 @@ for (let i = 0; i < names.length; i++) {
 }
 
 list.innerHTML = items;
+*/
+
+// versione createElement
+
+for (let i = 0; i < names.length; i++) {
+    const newLi = document.createElement('li');
+    newLi.append(names[i]);
+    list.appendChild(newLi);
+}
