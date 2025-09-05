@@ -1,34 +1,14 @@
-// SELEZIONE
-const mioParagrafo = document.querySelector(".myParagraph");
-console.log(mioParagrafo);
+const list = document.querySelector(".list");
 
-const mioBottone = document.getElementById("myButton");
-console.log(mioBottone);
+const names = ['Qui', 'Quo', 'Qua'];
 
-// gestiamo evento su bottone
-mioBottone.addEventListener('click',
-    cambiaColore
-);
+let items = '';
 
-
-function cambiaColore() {
-    // check se presente già classe aggiuntiva
-    const isGreen = mioParagrafo.classList.contains("textgreen");
-    if (isGreen) {
-        mioParagrafo.classList.remove("textgreen");
-        mioParagrafo.innerText += "Altro testo";
-    } else {
-        mioParagrafo.classList.add("textgreen");
-    }
-
-    console.log(mioParagrafo.classList);
+for (let i = 0; i < names.length; i++) {
+    items += `<li>${names[i]}</li>`;
+    // list.innerHTML += `<li>${names[i]}</li>`;
+    // console.log("siamo all'iterazione numero", i, items);
 
 }
 
-function cambiaColoreToggle() {
-    // check se presente già classe aggiuntiva
-    mioParagrafo.classList.toggle("textgreen");
-
-    console.log(mioParagrafo.classList);
-
-}
+list.innerHTML = items;
