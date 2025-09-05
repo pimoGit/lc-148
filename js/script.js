@@ -4,11 +4,18 @@ const field = document.getElementById('username');
 const button = document.querySelector('button');
 // selezioniamo il blocco di output
 const mioPar = document.getElementById("mioP");
+// seleziono l'emeneto form
+const mioForm = document.querySelector('form');
+
 
 
 // getione evento bottone
-button.addEventListener("click",
-    () => {
+mioForm.addEventListener("submit",
+    (event) => {
+        // Blocco l'invio del form..
+        event.preventDefault();
+
+        // fai quello che devi
         const nameValue = field.value.trim();
         if (nameValue) {
             // Marco
