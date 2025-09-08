@@ -10,11 +10,7 @@
     font-size: 12px;
 }
 
-.myParagraph {
-    color: red;
-    font-size: 16px;
-}
-
-.textgreen {
+#display {
+    font-size: 40px;
     color: green;
 }

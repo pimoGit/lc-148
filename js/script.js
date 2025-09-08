@@ -1,28 +1,27 @@
-// selezioniamo l'input
-const field = document.getElementById('username');
-// selezioniamo il bottone
-const button = document.querySelector('button');
-// selezioniamo il blocco di output
-const mioPar = document.getElementById("mioP");
-// seleziono l'emeneto form
-const mioForm = document.querySelector('form');
+// selezione dell'elemento di output
+const outputDisplay = document.getElementById("display");
+console.log(outputDisplay);
+
+// settiamo i valori di partenza
+let seconds = 10;
+outputDisplay.innerText = seconds--;
 
 
+// settiamo l'intervallo in cui deve avvenire il conteggio
+const intervalId = setInterval(function () {
+    // SE sono alla fine 
+    if (seconds === 0) {
+        // allora invio auguri e fermo l'esecuzione
+        outputDisplay.innerText = "Buon annooooo!!!!";
+        clearInterval(intervalId);
+    } else {
+        // ALTRIMENTI
+        // decremento il contatore
+        // e stampo il valore in pagina (output)
+        outputDisplay.innerText = seconds--;
+    }
 
-// getione evento bottone
-mioForm.addEventListener("submit",
-    (event) => {
-        // Blocco l'invio del form..
-        event.preventDefault();
-
-        // fai quello che devi
-        const nameValue = field.value.trim();
-        if (nameValue) {
-            // Marco
-            // console.log(nameValue);
-            mioPar.innerText = nameValue;
-            field.value = "";
-        }
-    })
+}, 1000);
 
 
+console.log("una cosa sincrona");
