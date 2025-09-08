@@ -1,40 +1,44 @@
-// selezioniamo gli elementi di pagina
-const pageDisplay = document.getElementById("display");
-const startButton = document.querySelector(".btn-success");
-const stopButton = document.querySelector(".btn-danger");
+//  selezioniamo gli elemnti di output e interazione dalla page
+const progressBar = document.querySelector(".progress-bar");
+const uploadButton = document.getElementById("upload-button");
+const outputMsg = document.getElementById("message");
 
-// setto variabile di ref al interval
-let timer;
 
-// logica del bottone start
-startButton.addEventListener("click",
+// logica di gestione click su bottone Upload
+uploadButton.addEventListener("click",
     function () {
 
-        // gestiamo abilità dei bottoni
-        startButton.disabled = true;
-        stopButton.disabled = false;
+        // disabilito il bottone
+        uploadButton.disabled = true;
 
-        // variabile di conteggio
-        let count = 0;
+        // inizializziamo contatore
+        let progress = 0;
+        let progressOutput = progress + "%";
 
-        // incrementiamo il contatore del tempo
-        timer = setInterval(() => {
-            // incremento e output
-            // count++;
-            pageDisplay.innerText = ++count;
-        }, 1000);
-    }
-);
+        // usiamo i valori per modificare il DOM
+        progressBar.innerText = progressOutput;
+        progressBar.style.width = progressOutput;
 
-// logica del bottone stop
-stopButton.addEventListener("click",
-    function () {
+        // simulazione upload (temporale)
+        const progInterval = setInterval(() => {
+            if (progress === 100) {
+                clearInterval(progInterval);
 
-        // gestiamo abilità dei bottoni
-        startButton.disabled = false;
-        stopButton.disabled = true;
+                // gestisco messaggio
+                outputMsg.classList.remove("d-none");
+                // tolgo bottone
+                uploadButton.classList.add("d-none");
+            } else {
 
-        // concludo l'esecuzione del timer
-        clearInterval(timer);
+                // incrementiamo il valore di output
+                progressOutput = ++progress + "%";
+
+                // usiamo i valori per modificare il DOM
+                progressBar.innerText = progressOutput;
+                progressBar.style.width = progressOutput;
+            }
+
+        }, 100);
+
     }
 );
