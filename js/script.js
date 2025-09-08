@@ -24,3 +24,17 @@ function arrayUniqueNumbers(numMin, numMax, numberElemnts) {
 
 
 // arrayUniqueNumbers(10, 50, 5);
+
+
+
+// ESEMPIO SELETTORI
+const mioLi = document.querySelectorAll("li");
+console.log(mioLi);
+
+
+for (let i = 0; i < mioLi.length; i++) {
+    let elementoLi = mioLi[i];
+    elementoLi.innerText = "Ciao" + i;
+}
+
+mioLi[3].innerText = "vado via";
