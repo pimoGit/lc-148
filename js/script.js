@@ -4,6 +4,8 @@ const palla = {
     "peso": 40,
 };
 
+const nuovaPalla = {};
+
 // settaggio di valore esistente
 palla.peso = 50;
 // palla["peso"] = 60;
@@ -29,3 +31,16 @@ console.log(palla.inputUser); //'pallina da golf'
 console.log(palla[inputUser]); //'pallina da golf'
 */
 
+// aggiunta ciclo FOR IN
+
+
+for (let key in palla) {
+    console.log(key, palla[key]);
+}
+
+
+
+// Risultato atteso: 
+// 12
+// pallina da golf
+// non per forza in questo ordine
