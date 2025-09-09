@@ -1,40 +1,31 @@
-function numRandomGen(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const palla = {
+    "colore": ['red', 'blue'],
+    'tipo': 'pallina da golf',
+    "peso": 40,
+};
+
+// settaggio di valore esistente
+palla.peso = 50;
+// palla["peso"] = 60;
+
+//creare una nuova prop con valore 
+palla.brand = "newBall";
+// palla["brand"] = "newBall";
 
 
-console.log(numRandomGen(10, 50));
-
-
-// funzione che genera un array di tot numeri in un range
-function arrayUniqueNumbers(numMin, numMax, numberElemnts) {
-    // mi creo un array vuoto di partenza
-
-    // ciclo l'array creato FINO CHE è più corto di numberElemnts
-    // genero un numero random in un range
-    let nuovoNumero = numRandomGen(numMin, numMax);
-
-    // verifico se nuovoNumero è già incluse nell'array creato
-    // SE NON è vero
-    // lo pusho nell'array creato
-
-
-    // ritorno l'array creato
-}
-
-
-// arrayUniqueNumbers(10, 50, 5);
+console.log(palla);
 
 
 
-// ESEMPIO SELETTORI
-const mioLi = document.querySelectorAll("li");
-console.log(mioLi);
+// differenza tra le due notazioni
+/*
+const inputUser = prompt("di quale propietà vuoi il valore?");
 
 
-for (let i = 0; i < mioLi.length; i++) {
-    let elementoLi = mioLi[i];
-    elementoLi.innerText = "Ciao" + i;
-}
+console.log(palla.inputUser); //'pallina da golf'
 
-mioLi[3].innerText = "vado via";
+
+
+console.log(palla[inputUser]); //'pallina da golf'
+*/
+
