@@ -1,20 +1,43 @@
-function somma(num1, num2) {
-    return num1 + num2;
-}
+const obj = { name: 'palla', peso: 50 };
+//{name: "palla", peso: 50, colore: "blue"}
+
+// const name = obj.name;
+// const peso = obj.peso;
 
 
-function sommaTutto(...numeri) {
-    let somma = 0;
-    for (let index = 0; index < numeri.length; index++) {
-        const numero = numeri[index];
-        somma += numero;
-    }
-
-    return somma
-
-}
-
-console.log(somma(7, 10), somma(12, 20, 33));
+// const copyObj = {
+//     name,
+//     peso,
+//     colore: "blue"
+// };
 
 
-console.log(sommaTutto(3, 6, 10, 1));
+// copio solo un ref allo stesso oggetto
+// const copyObj = obj;
+
+// creo un clone su un oggetto nuovo
+const copyObj = { ...obj, altraprop: "valore" };
+
+
+
+obj.nuovaprop = "valore";
+
+console.log(copyObj);
+
+// esempio su array
+const mioArray = [1, 2, 4, 45, 5];
+const mioArray2 = [12, 22, 33, 444, 55];
+
+
+// in realtà copio solo il ref
+// const arrayClone = mioArray;
+
+// creo un vero e proprio clone
+const arrayClone = [...mioArray];
+const concatArrays = [...mioArray, ...mioArray2];
+
+mioArray.push(77);
+
+console.log(concatArrays);
+
+
