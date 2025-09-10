@@ -4,14 +4,14 @@ const student = {
     "email": 'paolo@email.it'
 };
 
-// const name = student.name;
+// const username = student.name;
 // const email = student.email;
 
-const { name, email } = student;
-console.log(name, email, ciao);
+const { name: userName, email } = student;
+console.log(userName, email);
 //Otteniamo: Paolo, paolo@email.it
 
 const template = `<div>
-<p>Nome: ${name}</p>
+<p>Nome: ${userName}</p>
 <p>Email: ${email}</p>
 </div>`
