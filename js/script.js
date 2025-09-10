@@ -1,43 +1,21 @@
-const obj = { name: 'palla', peso: 50 };
-//{name: "palla", peso: 50, colore: "blue"}
+const createMyElement = (tag, text, ...classes) => {
+    // creo il nuovo elemento in base al tag passato
+    const newElement = document.createElement(tag);
+    // inserisco il testo passato nel tag creato
+    newElement.append(text);
+    // aggiungo le classi all'elemento
+    newElement.classList.add(...classes);
+    return newElement
+}
 
-// const name = obj.name;
-// const peso = obj.peso;
-
-
-// const copyObj = {
-//     name,
-//     peso,
-//     colore: "blue"
-// };
-
-
-// copio solo un ref allo stesso oggetto
-// const copyObj = obj;
-
-// creo un clone su un oggetto nuovo
-const copyObj = { ...obj, altraprop: "valore" };
+console.log(createMyElement("h2", "ciao sono un titolo", "classe1", "classe2", "classe3"));
 
 
+const elementOutput = document.getElementById("output");
 
-obj.nuovaprop = "valore";
+const nuovoElemento = createMyElement("h2", "ciao sono un titolo", "classe1", "classe2", "classe3");
 
-console.log(copyObj);
+const nuovoElementoDue = createMyElement("p", "ciao sono unparagrafo", "classeparagrafo");
 
-// esempio su array
-const mioArray = [1, 2, 4, 45, 5];
-const mioArray2 = [12, 22, 33, 444, 55];
-
-
-// in realtà copio solo il ref
-// const arrayClone = mioArray;
-
-// creo un vero e proprio clone
-const arrayClone = [...mioArray];
-const concatArrays = [...mioArray, ...mioArray2];
-
-mioArray.push(77);
-
-console.log(concatArrays);
-
-
+elementOutput.appendChild(nuovoElemento);
+elementOutput.appendChild(nuovoElementoDue);
