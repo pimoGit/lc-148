@@ -1,31 +1,20 @@
-const student = {
-    "name": 'Paolo',
-    "age": 30,
-    "email": 'paolo@email.it'
-};
-
-// const username = student.name;
-// const email = student.email;
-
-const { name: userName, email } = student;
-console.log(userName, email);
-//Otteniamo: Paolo, paolo@email.it
-
-const template = `<div>
-<p>Nome: ${userName}</p>
-<p>Email: ${email}</p>
-</div>`
+function somma(num1, num2) {
+    return num1 + num2;
+}
 
 
-// versione sugli array
-const myArray = [1, 2, 3, 4, 5, 6, 7];
+function sommaTutto(...numeri) {
+    let somma = 0;
+    for (let index = 0; index < numeri.length; index++) {
+        const numero = numeri[index];
+        somma += numero;
+    }
 
-// const firstNumber = myArray[0];
-// const secondNumber = myArray[1];
-//  const fifthNumber = myArray[4];
+    return somma
 
-const [firstNumber, secondNumber, , , fifthNumber] = myArray;
+}
+
+console.log(somma(7, 10), somma(12, 20, 33));
 
 
-
-console.log(firstNumber, secondNumber, fifthNumber);
+console.log(sommaTutto(3, 6, 10, 1));
