@@ -23,3 +23,43 @@ const pics = [
         text: 'Epic Nordic fantasy with dragons and ancient magic.',
     }
 ];
+
+// selezioniamo elemento di output delle slide
+const carouselGallery = document.querySelector(".gallery");
+
+// generiamo i blocci delle slide in base a array e lo insieriemo in page
+renderingSlides();
+
+
+
+
+
+
+// FUNZIONI
+function renderingSlides() {
+    // variabile di accumulo
+    let slides = "";
+
+    // cicliamo array di oggetti slides
+    for (let index = 0; index < pics.length; index++) {
+        const slide = pics[index];
+        // console.log(slide);
+
+        // destrutturazione oggetto slide
+        const { title, text, image } = slide;
+
+        slides += `
+        <figure class="active">
+            <figcaption>
+                <h2>${title}</h2>
+                <h3>${text}</h3>
+            </figcaption>
+            <img alt="${title}" src="${image}">
+        </figure>
+`;
+        console.log("iterazione numero", index, slides);
+    }
+
+    // inseriamo nell'elemento di putput le slides create
+    carouselGallery.innerHTML = slides;
+}

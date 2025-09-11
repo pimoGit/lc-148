@@ -64,3 +64,20 @@
 .gallery figure.active {
     display: block;
 }
+
+/* parte delle frecce */
+#carousel .fa-solid {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#prev {
+    left: -10%;
+}
+
+#next {
+    right: -10%;
+}
