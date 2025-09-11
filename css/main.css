@@ -1,16 +1,66 @@
-/* reloge generali */
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#display {
-    font-size: 40px;
-    color: green;
+/* # Carousel */
+
+#carousel {
+    height: 400px;
+    width: 700px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.gallery {
+    height: 100%;
+}
+
+.gallery figure {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    position: absolute;
+    text-align: right;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+.gallery figcaption h3 {
+    font-size: 1rem;
+}
+
+/* getione immaine attiva */
+.gallery figure {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+
+.gallery figure.active {
+    display: block;
 }

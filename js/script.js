@@ -1,21 +1,25 @@
-const createMyElement = (tag, text, ...classes) => {
-    // creo il nuovo elemento in base al tag passato
-    const newElement = document.createElement(tag);
-    // inserisco il testo passato nel tag creato
-    newElement.append(text);
-    // aggiungo le classi all'elemento
-    newElement.classList.add(...classes);
-    return newElement
-}
-
-console.log(createMyElement("h2", "ciao sono un titolo", "classe1", "classe2", "classe3"));
-
-
-const elementOutput = document.getElementById("output");
-
-const nuovoElemento = createMyElement("h2", "ciao sono un titolo", "classe1", "classe2", "classe3");
-
-const nuovoElementoDue = createMyElement("p", "ciao sono unparagrafo", "classeparagrafo");
-
-elementOutput.appendChild(nuovoElemento);
-elementOutput.appendChild(nuovoElementoDue);
+// # Fase di preparazione
+//  Preparo i dati su cui basare il carosello
+const pics = [
+    {
+        image: 'img/01.jpg',
+        title: 'Svezia',
+        text: 'Scandinavia\'s blend of nature and innovation.',
+    }, {
+        image: 'img/02.jpg',
+        title: 'Norvegia',
+        text: 'Fjords, mountains, and coastal charm in Nordic splendor.',
+    }, {
+        image: 'img/03.jpg',
+        title: 'Alaska',
+        text: 'Untamed wilderness and rugged beauty in the Last Frontier.',
+    }, {
+        image: 'img/04.jpg',
+        title: 'Gran Canyon',
+        text: 'Nature\'s masterpiece, a colorful tapestry of cliffs.',
+    }, {
+        image: 'img/05.jpg',
+        title: "Skyrim",
+        text: 'Epic Nordic fantasy with dragons and ancient magic.',
+    }
+];
