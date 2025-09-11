@@ -47,7 +47,16 @@ images[0].classList.add("active");
 // getsione navigazione NEXT
 nextArrow.addEventListener("click",
     () => {
-        const nuovoIndice = currentActiveIndex + 1;
+
+        const nuovoIndice = currentActiveIndex === images.length - 1 ? 0 : currentActiveIndex + 1;
+
+        // let nuovoIndice;
+
+        // if (currentActiveIndex === images.length - 1) {
+        //     nuovoIndice = 0;
+        // } else {
+        //     nuovoIndice = currentActiveIndex + 1;
+        // }
 
         setCurrentSlide(nuovoIndice);
 
@@ -59,7 +68,15 @@ nextArrow.addEventListener("click",
 prevArrow.addEventListener("click",
     () => {
 
-        const nuovoIndice = currentActiveIndex - 1;
+        const nuovoIndice = currentActiveIndex === 0 ? images.length - 1 : currentActiveIndex - 1;
+
+        // let nuovoIndice;
+
+        // if (currentActiveIndex === 0) {
+        //     nuovoIndice = images.length - 1;
+        // } else {
+        //     nuovoIndice = currentActiveIndex - 1;
+        // }
 
         setCurrentSlide(nuovoIndice);
 
