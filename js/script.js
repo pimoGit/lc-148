@@ -26,9 +26,50 @@ const pics = [
 
 // selezioniamo elemento di output delle slide
 const carouselGallery = document.querySelector(".gallery");
+// seleziooniamo i tasti freccia
+const nextArrow = document.getElementById("next");
+const prevArrow = document.getElementById("prev");
+
 
 // generiamo i blocci delle slide in base a array e lo insieriemo in page
 renderingSlides();
+
+
+// andiamo a selezionare gli elemnti di slide creati
+const images = document.querySelectorAll(".gallery figure");
+console.log(images);
+//  creo una variabile di indice della slide per getire la posizione
+let currentActiveIndex = 0;
+// setto l'active alla prima slide
+images[0].classList.add("active");
+
+
+// getsione navigazione NEXT
+nextArrow.addEventListener("click",
+    () => {
+        const nuovoIndice = currentActiveIndex + 1;
+
+        setCurrentSlide(nuovoIndice);
+
+    }
+);
+
+
+// getsione navigazione NEXT
+prevArrow.addEventListener("click",
+    () => {
+
+        const nuovoIndice = currentActiveIndex - 1;
+
+        setCurrentSlide(nuovoIndice);
+
+    }
+);
+
+
+
+
+
 
 
 
@@ -49,7 +90,7 @@ function renderingSlides() {
         const { title, text, image } = slide;
 
         slides += `
-        <figure class="active">
+        <figure>
             <figcaption>
                 <h2>${title}</h2>
                 <h3>${text}</h3>
@@ -57,9 +98,23 @@ function renderingSlides() {
             <img alt="${title}" src="${image}">
         </figure>
 `;
-        console.log("iterazione numero", index, slides);
+        // console.log("iterazione numero", index, slides);
     }
 
     // inseriamo nell'elemento di putput le slides create
     carouselGallery.innerHTML = slides;
+}
+
+//  setta la slide corrente
+function setCurrentSlide(indexSlide) {
+
+    // tolgo active da elemento corrente
+    images[currentActiveIndex].classList.remove("active");
+
+    // incrementiamo l'indice di ref slide
+    currentActiveIndex = indexSlide;
+
+    // agiungo active al nuovo elemento 
+    images[currentActiveIndex].classList.add("active");
+
 }
