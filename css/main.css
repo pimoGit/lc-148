@@ -81,3 +81,22 @@
 #next {
     right: -10%;
 }
+
+/* parte delle thumbs */
+/*  thumbnails */
+#thumbnails {
+    width: 700px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#thumbnails img {
+    width: 19%;
+    /* per lasciare spazio */
+    height: 100%;
+    border-radius: 10px;
+    filter: grayscale(1);
+}

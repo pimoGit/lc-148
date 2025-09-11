@@ -29,6 +29,8 @@ const carouselGallery = document.querySelector(".gallery");
 // seleziooniamo i tasti freccia
 const nextArrow = document.getElementById("next");
 const prevArrow = document.getElementById("prev");
+// selezioniamo elemento container delle thumbs
+const thumbsContainer = document.getElementById("thumbnails");
 
 
 // generiamo i blocci delle slide in base a array e lo insieriemo in page
@@ -95,8 +97,10 @@ prevArrow.addEventListener("click",
 
 // FUNZIONI
 function renderingSlides() {
-    // variabile di accumulo
+    // variabile di accumulo slides
     let slides = "";
+    // variabile di accumulo thumbs
+    let miniPic = "";
 
     // cicliamo array di oggetti slides
     for (let index = 0; index < pics.length; index++) {
@@ -106,6 +110,7 @@ function renderingSlides() {
         // destrutturazione oggetto slide
         const { title, text, image } = slide;
 
+        // acculiamo le slides
         slides += `
         <figure>
             <figcaption>
@@ -114,12 +119,22 @@ function renderingSlides() {
             </figcaption>
             <img alt="${title}" src="${image}">
         </figure>
-`;
+        `;
         // console.log("iterazione numero", index, slides);
+
+        // accumuliamo le thumbs
+        miniPic += `
+            <img alt="${title}" src="${image}">
+        `;
+        // console.log(miniPic);
+
     }
 
-    // inseriamo nell'elemento di putput le slides create
+    // inseriamo nell'elemento di output le slides create
     carouselGallery.innerHTML = slides;
+    // inseriamo nell'elemento di output le thumbs create
+    thumbsContainer.innerHTML = miniPic;
+
 }
 
 //  setta la slide corrente
