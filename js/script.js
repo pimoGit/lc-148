@@ -1,7 +1,15 @@
-const numeri = [1, 2, 3, 4, 5];
+const people = [
+    { id: 4, name: 'Paolo', age: 32 },
+    { id: 3, name: 'Clelia', age: 34 },
+];
 
-const primoNumeroPari = numeri.find((numero) => {
-    return numero % 2 === 0;
+// trova la person con id 3
+const myPerson = people.find((person) => {
+    return person.id === 3;
 });
 
-console.log(primoNumeroPari); // 2
+
+console.log(myPerson);
+
+
+//RISULTATO: { id: 3, name: 'Clelia', age: 34 }
