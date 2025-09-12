@@ -1,23 +1,26 @@
-const students = [
-    { firstName: 'Mario', lastName: 'Rossi' },
-    { firstName: 'Luigi', lastName: 'Verdi' },
-    { firstName: 'Margherita', lastName: 'Bianchi' }
-];
+const numeri = [1, 2, 3, 4, 5, 8, 10, 13];
 
+const pari = numeri.filter((numero) => {
+    // if (numero % 2 === 0) {
+    //     return true;
+    // }
+    // return false;
 
-// ["Mario Rossi", ...]
-
-const names = students.map(student => {
-    return student.firstName + " " + student.lastName;
+    return numero % 2 === 0
 });
 
-console.log(students, names);
+console.log(numeri, pari); // [2, 4]
 
 
-// versione forEach
-const names2 = [];
-students.forEach((student) => {
-    names2.push(student.firstName + " " + student.lastName);
-});
 
-console.log(names2);
+// versione con FOR
+const pari2 = [];
+for (let index = 0; index < numeri.length; index++) {
+    const numero = numeri[index];
+
+    if (numero % 2 === 0) {
+        pari2.push(numero);
+    }
+}
+
+console.log(pari2);
