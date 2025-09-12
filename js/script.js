@@ -1,49 +1,21 @@
-const cats = [
-    { name: 'Jerry', color: 'Gray' },
-    { name: 'Felix', color: 'Black and White' },
-    { name: 'Garfield', color: 'Orange' },
-];
+const numeri = [1, 2, 3, 4, 5];
 
-cats.forEach((element) => {
-    console.log(`
-        ${element.name}'s color is ${element.color}
-        `);
+const quadrati = numeri.map(numero => {
+    return numero * numero;
 });
+
+console.log("array originale", numeri);
+console.log(quadrati); // [1, 4, 9, 16, 25]
 
 
 // versione FOR
-for (let index = 0; index < cats.length; index++) {
-    const element = cats[index];
+const quadrati2 = [];
 
-    console.log(`
-        ${element.name}'s color is ${element.color}
-        `);
+for (let index = 0; index < numeri.length; index++) {
+    const numero = numeri[index];
+
+    quadrati2.push(numero * numero);
 }
 
+console.log(quadrati2);
 
-
-
-
-// ESEMOPIO DI METODI E NESSUNA MAGIA NERA SU JS
-function forEach(element, index, array) {
-
-    myObj.myfunct1();
-
-    push()
-
-    return undefined
-}
-
-
-const myObj = {
-    prop1: "valore",
-    prop2: 3,
-    myfunct1() {
-        // fai qualcosa
-    }
-}
-
-myObj.prop1;
-myObj.prop2;
-
-myObj.myfunct1();
