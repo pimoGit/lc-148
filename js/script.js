@@ -1,21 +1,23 @@
-const numeri = [1, 2, 3, 4, 5];
+const students = [
+    { firstName: 'Mario', lastName: 'Rossi' },
+    { firstName: 'Luigi', lastName: 'Verdi' },
+    { firstName: 'Margherita', lastName: 'Bianchi' }
+];
 
-const quadrati = numeri.map(numero => {
-    return numero * numero;
+
+// ["Mario Rossi", ...]
+
+const names = students.map(student => {
+    return student.firstName + " " + student.lastName;
 });
 
-console.log("array originale", numeri);
-console.log(quadrati); // [1, 4, 9, 16, 25]
+console.log(students, names);
 
 
-// versione FOR
-const quadrati2 = [];
+// versione forEach
+const names2 = [];
+students.forEach((student) => {
+    names2.push(student.firstName + " " + student.lastName);
+});
 
-for (let index = 0; index < numeri.length; index++) {
-    const numero = numeri[index];
-
-    quadrati2.push(numero * numero);
-}
-
-console.log(quadrati2);
-
+console.log(names2);
