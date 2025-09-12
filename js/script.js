@@ -1,19 +1,7 @@
-const numeri = [1, 2, 3, 4, 5, 8, 10, 13];
+const numeri = [1, 2, 3, 4, 5];
 
-const pari = numeri.filter(numero => numero % 2 === 0);
+const primoNumeroPari = numeri.find((numero) => {
+    return numero % 2 === 0;
+});
 
-console.log(numeri, pari); // [2, 4]
-
-
-
-// versione con FOR
-const pari2 = [];
-for (let index = 0; index < numeri.length; index++) {
-    const numero = numeri[index];
-
-    if (numero % 2 === 0) {
-        pari2.push(numero);
-    }
-}
-
-console.log(pari2);
+console.log(primoNumeroPari); // 2
