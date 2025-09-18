@@ -1,55 +1,40 @@
 // selezione delgli elementi di output
-const play1 = document.getElementById("player1Output");
-const play2 = document.getElementById("player2Output");
-const resultOutput = document.getElementById("message");
-// e di interazione
-const gioca = document.getElementById("playbutton");
+const contOutput = document.querySelector(".container");
+console.log(contOutput);
 
-// settiamo costante per ednpoint di API
-const min = 1;
-const max = 6;
-const nItems = 2;
-const endPointApi = `https://flynn.boolean.careers/exercises/api/array/integers?min=${min}&max=${max}&items=${nItems}`;
+// setto la variabile dell'endpoint
+const apiRef = "https://jsonplaceholder.typicode.com/posts";
 
 
-gioca.addEventListener("click", playDice);
+// chiamata ajax all'api
+axios.get(apiRef).then((response) => {
+    // estrapoliamo i dati
+    // console.log(response);
+    const posts = response.data;
+    // console.log(posts);
 
 
 
-// FUNZIONE di chiamata per gioco dadi
-function playDice() {
+    // creo var di accumulo output (stringa)
+    let postsString = "";
 
-    axios.get(endPointApi)
-        .then(rispApi => {
-            //codice da eseguire in caso di successo
-            const result = rispApi.data.response;
-            console.log(result);
+    // utilizzo i dati (array per creare elementi di pagina)
+    posts.forEach(postItem => {
+        console.log(postItem);
 
-            // estrapolo valori per utilizzo distinto
-            // const playNumber1 = result[0];
-            // const playNumber2 = result[1];
-            const [playNumber1, playNumber2] = result;
+        // ad ogni post aggiungiamo un pezzo alla stringa di output
+        postsString += `
+        <div class="card">
+            <h2>${postItem.title}</h2>
+            <span>${postItem.id}</span>
+            <p>${postItem.body}</p>
+        </div>
+        `;
 
-            // output dei due numeri
-            play1.innerHTML = `Il nunero uscito per il giocatore Uno è ${playNumber1}`;
-            play2.innerHTML = `Il nunero uscito per il giocatore Due è ${playNumber2}`;
+    });
 
-            // costruzione del messaggio finale del risultato
-            let messageOutput = "Avete opareggiato";
+    // faccio output con trasformazione di stringa in HTML
+    contOutput.innerHTML = postsString;
 
-            if (playNumber1 > playNumber2) {
-                messageOutput = "Ha vinto il giocatore Uno";
-            } else if (playNumber1 < playNumber2) {
-                messageOutput = "Ha vinto il giocatore Due";
-            }
 
-            resultOutput.innerHTML = messageOutput;
-
-        })
-        .catch(error => {
-            // codice da eseguire in caso di errore
-            console.error(error)
-        })
-
-}
-// chiamata AJAX
+})
